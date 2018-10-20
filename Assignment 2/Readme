@@ -1,0 +1,48 @@
+Gabriel Lee
+Student ID : 0836295
+CIS 3110
+Assignment 2
+
+
+Introduction:
+
+For this assignment we were to create a CPU scheduling algorithm that will complete the execution of a group of multi-threaded processes in an OS that understands threads. We were given a text file with a specific format that would simulate the CPU. We had to implement two different scheduling algorithms, FCFS and RoundRobin. The user could also add in arguments such as "-d" for detailed information mode and "-v" for verbose mode. The Round Robin mode is engaged when "-r" is used as an argument followed by a qauntum number.
+
+
+Compiling:
+
+To compile the program, you open up the terminal in the correct path and type "make". After this you can do "./simcpu" followed by any arguement after it such as "-d" for detailed mode, "-v" for verbose mode and "-r" followed by a integer that is the quantum number for Round robin mode. 
+
+
+Algorithm:
+
+FCFS:
+
+My program reads in the Cpu simulation which is the text file through nested for loops. After the first thread is scanned in , i added up the total Cpu time and io time in two different variables, one that tracks the specific thread which is temporary and the other that tracks the global time. This is considered to be my global clock. After each thread is read in i reset the temporary values for Io and Cpu time so i can read in the next thread's cpu and io time. This is how i implemented the first come first serve basis where it reads in each thread number one by one and then resets afterwards. There was no error checking done towards this algorithm.
+
+
+Round Robin:
+
+The Round Robin goes through the text file exactly the same as the FCFS mode, but implements the Round Robin method when reading in the cpu and io time. Im not sure if this was implemented correctly therefor no error checking was done. 
+
+Questions:
+
+i) Does your simulator include switch overhead for the first ready state to running state transition Explain ? 
+
+My simultaor does include a overhead for the first ready state to running state transition because i read in every thread one by one and reset the data after each thread is read in. 
+
+ii) Does your simulator include switch overhead if a thread moves from ready state to running state and the CPU is idle? Explain. 
+
+My simulator does not include a switch overhead if a thread moves from ready state to running state and the Cpu is idle.
+
+iii) Does  your  simulator  include  switch  overhead  if  a  thread  moves  from 
+running state to blocked state and the ready queue is empty? Explain. 
+
+My simulator does not include a switch overhead if a thread moves from running state to blocked state and the ready qeuue is empty.
+
+iv) Does  your  simulation  include  switch  overhead  if  a  thread  is  interrupted (due to a time slice) and either the ready queue is empty or the thread has the highest priority? Explain. 
+
+My simulator does not include a switch overhead if a thread is interruped and either the ready queue is empty or the thread has the highest priority. 
+ 
+
+
