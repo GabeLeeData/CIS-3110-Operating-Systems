@@ -1,0 +1,33 @@
+Assignment 3:
+
+Part 1: Philsopher Diner
+
+Introduction:
+
+For part one of assignment 3 we were to make a solution to the philospher dining problem. This problem was that there are philosphers sitting around a table and can only eat when they have both forks within their hand. This issue with this is that there will become a state where each person is waiting for a fork and will wait eternally for someone else to release a fork. 
+
+
+Algorithm: 
+
+My solution to this problem was that when each philospher starts to eat, the program would go to sleep until the philospher has finished eating. The philosphers would determine whos eating by the first and last philosphers grabbing the respective forks to eat, by doing it this way, we avoid deadlock and a eternal state where each philospher is waiting. Each philospher had their mutex's initailzied because they were loaded into individual threads where then this logic could be applied to avoid deadlock. 
+
+Compiling:
+
+To run the executable, simply go to the directory and type 'make' within the appropriate directory. After it is compiled simply type in the format "./dine #of philosphers #of times to eat" and hit enter. The program will execute upon hitting enter. 
+
+
+Part 2: Memory Simulator
+
+Introduction: 
+
+For part two of assignment 3 we were to implement four algorithms for plcing processes into holes in memory. These four algoirthms were Best fit, Worst fit, Next fit and First fit. We receive a text file that has a process id and a process size as a format. We have to essentially load them into the memory and according to each rules, swap processes out as needed to create a larger hole.
+
+Alrogithm:
+
+The structure of my code is essentially a for loop that runs throughout the four different modes necessary. It starts off with First fit, Best fit, Next fit and then finally Worst fit. My code is designed where after each loop all variables are reset and there are conditions to apply what is necessary for the next fit within the loop. After all four modes have been ran, the program will exit. It is also assumed that the memory will be 128 , which is stated in the assignment and assumed that the formate of the text file is "Id Process<space>Process Size".
+
+
+Compiling:
+
+To run the executable, simply g o to the directory and type 'make' within the appropriate directory. After it is compiled simply type in the format "./holes <filename.txt>" and hit enter. The program will execute upon hitting enter.
+
