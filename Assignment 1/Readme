@@ -1,0 +1,20 @@
+Assignment 1: Writting a Shell
+Name: Gabriel Lee
+Student ID: 0836295
+
+
+*****The Shell - Alogrithm *****
+
+
+For assignment 1 we are required to create a simple UNIX shell program. We were given a lex and already parses the arguments. The shell program behaves like any other shell program and should be treated like one, on top of the basic shell features there are additional functions. The shell can handle all of the basic exceptions such as commands with or without arguments. Examples of this are commands such as ls, which has no argument and ls -1, which has arguments. This is a fairly basic shell feature and has been implemented with error checking. If a unkown command is entered, a message will be prompt to tell the user. The shell can also handle arguments which will be executed in the backgrounds when a ampersand, '&', is found on the last thing on the line. On top of the ampersand function we also have file operations incorporated into the shell as well. The symbol '>' has to do with redirection of the output file, while the symbol '<' has to do with the redirection of the input file. Another function of the shell is the exit command, when 'exit' is typed into the shell, the shell closes. These functions were required within the assignment.
+
+
+On top of the basic requirements, new commands were also implemented. A 'add' function was implemented as well where typing "add" then entering numbers as arguments would output the numbers and its sum. Hexadecimals can also be used where it start of as 0x then follows with a letter. This hexadecimal is converted to a numerical value. A 'arg' function implemented as well where typing 'args' then entering arguments would count how many arguments there are and list them. A custom command i created was the prime number function. After typing 'prme' then a number , the shell will check if the number is a prime number or not. It has error check as well where only a positive integer can be entered.
+
+
+******Executing*******************
+
+To compile the program simply type 'make' in the command line in the correct directy of the program. After that type './msh' to run the shell.
+
+
+
